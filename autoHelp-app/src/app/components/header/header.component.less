@@ -15,6 +15,7 @@
     line-height: 100%;
     display: flex;
     align-items: center;
+    user-select: none;
     & span {
         padding-left: 24px;
     }
@@ -27,6 +28,9 @@
     font-size: 24px;
     line-height: 100%;
     box-sizing: border-box;
+    & > *:hover{
+        color: @color-red;
+    }
     & > *:not(:last-child) {
         padding-right: 40px;
     }

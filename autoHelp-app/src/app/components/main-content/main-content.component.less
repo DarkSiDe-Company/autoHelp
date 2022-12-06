@@ -1,0 +1,74 @@
+@import "../../../styles/varibles.less";
+
+.container {
+    position: relative;
+    padding: 70px 60px 160px 160px;
+    & > span {
+        color: @color-blue;
+        font-weight: 500;
+        font-size: 80px;
+        line-height: 100%;
+    }
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+}
+
+.list {
+    padding: 48px 0 36px 0;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 33px;
+    & > :not(:first-child) {
+        padding-top: 24px;
+    }
+    & > * {
+        display: flex;
+        align-items: center;
+    }
+    & #line {
+        width: 40px;
+        height: 8px;
+        margin-right: 16px;
+        background-color: @color-red;
+    }
+}
+
+.button {
+    background-color: @color-red;
+    color: @color-white;
+    user-select: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 28px;
+    padding: 16px 32px;
+    margin-bottom: 40px;
+}
+
+.timeAdress {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    & > :not(:first-child) {
+        padding-top: 16px;
+    }
+    & > * {
+        display: flex;
+        & > svg-icon {
+            margin-right: 16px;
+        }
+    }
+}
+
+img {
+    position: absolute;
+    max-width: 1200px;
+    max-height: 440px;
+    width: 60%;
+    top: 170px;
+    right: 0;
+}
