@@ -8,12 +8,18 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 
 import { HeaderComponent } from './components/header/header.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
+import { ServicesComponent } from './components/services/services.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
+import { MapComponent } from './components/map/map.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         HeaderComponent,
-        MainContentComponent
+        MainContentComponent,
+        ServicesComponent,
+        ContactsComponent,
+        MapComponent
     ],
     imports: [
         BrowserModule,
