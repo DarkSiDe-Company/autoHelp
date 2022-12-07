@@ -11,6 +11,7 @@ import { MainContentComponent } from './components/main-content/main-content.com
 import { ServicesComponent } from './components/services/services.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { MapComponent } from './components/map/map.component';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import { MapComponent } from './components/map/map.component';
         MainContentComponent,
         ServicesComponent,
         ContactsComponent,
-        MapComponent
+        MapComponent,
+        FormComponent
     ],
     imports: [
         BrowserModule,

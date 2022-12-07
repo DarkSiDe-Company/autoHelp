@@ -5,14 +5,45 @@
     flex-direction: column;
     align-items: center;
     padding: 120px 160px 60px;
-    &:first-child {
+    & > #title {
         font-weight: 700;
         font-size: 40px;
         color: @color-red;
     }
 }
 
-.content{
+.content {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    padding-top: 60px;
+}
+
+.contacts {
+    display: flex;
+    font-weight: 400;
+    font-size: 20px;
+    & > :first-child {
+        padding-right: 40px;
+    }
+}
+
+.adress {
+    font-weight: 400;
+    font-size: 16px;
+    padding-bottom: 28px;
+}
+
+.bold {
+    font-weight: 500;
+    font-size: 28px;
+    padding-bottom: 8px;
+}
+
+.icon {
+    display: flex;
+    align-items: top;
+    & > svg-icon {
+        margin-right: 16px;
+    }
 }
