@@ -1,16 +1,16 @@
 <div class="container">
     <div>Записаться на ремонт</div>
     <div>Заполните форму, и наш менеджер свяжется с вами в ближайшее время</div>
-    <form>
+    <form [formGroup]="requestForm">
         <div>
-            <label>Логин</label>
-            <input type="text" required name="login" />
+            <input type="text" formControlName="userPhone" placeholder="Номер телефона"/>
         </div>
         <div>
-            <label>Пароль</label>
-            <input type="password" required name="password" />
+            <input type="text" formControlName="userName" placeholder="Имя"/>
         </div>
-
-        <button>Войти</button>
+        <div>
+            <input type="text" formControlName="userCarBrand" placeholder="Марка машины" />
+        </div>
+        <button type="submit" (click)="sendRequest()">Оставить заявку</button>
     </form>
 </div>

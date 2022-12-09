@@ -2,7 +2,7 @@
     <span id="title">Контакты</span>
     <div class="content">
         <app-form></app-form>
-        <div>
+        <div class="information">
             <div class="contacts">
                 <div>
                     <div class="bold">Номера телефонов:</div>
@@ -25,7 +25,7 @@
                     <div class="bold">Электронный адрес:</div>
                     <div class="icon">
                         <svg-icon
-                            src="../../../assets/icons/mail.svg"
+                            src="../../../assets/icons/mail.svg" [svgStyle]="{ 'width.px': 24, 'height.px': 24 }"
                         ></svg-icon>
                         <span> avtohelp96@bk.ru </span>
                     </div>
