@@ -12,7 +12,7 @@ import { ServicesComponent } from './components/services/services.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { MapComponent } from './components/map/map.component';
 import { FormComponent } from './components/form/form.component';
-import {  ReactiveFormsModule } from '@angular/forms';
+import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -27,6 +27,7 @@ import {  ReactiveFormsModule } from '@angular/forms';
     imports: [
         BrowserModule,
         ReactiveFormsModule,
+        FormsModule,
         AppRoutingModule,
         HttpClientModule,
         AngularSvgIconModule.forRoot()

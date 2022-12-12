@@ -1,16 +1,26 @@
 <div class="container">
     <div>Записаться на ремонт</div>
     <div>Заполните форму, и наш менеджер свяжется с вами в ближайшее время</div>
-    <form [formGroup]="requestForm">
+    <form [formGroup]="requestForm" (submit)="onSubmit(requestForm)">
         <div>
-            <input type="text" formControlName="userPhone" placeholder="Номер телефона"/>
+            <input
+                type="number"
+                formControlName="userPhone"
+                required
+                placeholder="Номер телефона"
+            />
+            <div>Необходим номер телефона</div>
         </div>
         <div>
-            <input type="text" formControlName="userName" placeholder="Имя"/>
+            <input type="text" formControlName="userName" placeholder="Имя" />
         </div>
         <div>
-            <input type="text" formControlName="userCarBrand" placeholder="Марка машины" />
+            <input
+                type="text"
+                formControlName="userCarBrand"
+                placeholder="Марка машины"
+            />
         </div>
-        <button type="submit" (click)="sendRequest()">Оставить заявку</button>
+        <button type="submit" [disabled]="requestForm.invalid">Оставить заявку</button>
     </form>
 </div>
