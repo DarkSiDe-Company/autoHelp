@@ -4,15 +4,17 @@
     <form [formGroup]="requestForm" (submit)="onSubmit(requestForm)">
         <div>
             <input
-                type="number"
+                type="text"
                 formControlName="userPhone"
                 required
-                placeholder="Номер телефона"
+                placeholder="Номер телефона*"
+                prefix="+7"
+                mask="(000)000-00-00"
             />
-            <div>Необходим номер телефона</div>
+            <div class="tip">Введите свой номер телефона без "7"</div>
         </div>
         <div>
-            <input type="text" formControlName="userName" placeholder="Имя" />
+            <input type="text" formControlName="userName" placeholder="Имя*" />
         </div>
         <div>
             <input
@@ -21,6 +23,8 @@
                 placeholder="Марка машины"
             />
         </div>
-        <button type="submit" [disabled]="requestForm.invalid">Оставить заявку</button>
+        <button type="submit" [disabled]="requestForm.invalid">
+            Оставить заявку
+        </button>
     </form>
 </div>

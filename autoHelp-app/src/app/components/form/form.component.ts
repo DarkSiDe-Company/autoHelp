@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { map, of, switchMap } from 'rxjs';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
     selector: 'app-form',
@@ -15,33 +14,13 @@ export class FormComponent implements OnInit {
 
     ngOnInit(): void {
         this.requestForm = this.fb.group({
-            userPhone: [null, [Validators.required, Validators.pattern(/^\+7\(\d{3}\)-\d{3}-\d{2}-\d{2}/)]],
-            userName: [null],
+            userPhone: [null, [Validators.required, Validators.minLength(10), Validators.pattern(/^\d{3}\d{3}\d{2}\d{2}/)]],
+            userName: [null, [Validators.required]],
             userCarBrand: [null],
         })
-
-        this.requestForm.valueChanges.pipe(switchMap((value) => {
-            const phoneControl = this.requestForm.get('userPhone');
-
-            if (phoneControl) {
-                return phoneControl?.valueChanges
-            }
-            return of(null)
-
-        })).subscribe((controlValue: string) => {
-            console.log(controlValue)
-            if (controlValue) {
-                const replace = String(controlValue).replace(/^\+7/, '').replace(/\D/g, '');
-                console.log(replace);
-                this.requestForm.get('userPhone')?.setValue(replace, { emitEvent: false })
-            }
-
-        }
-
-        )
     }
 
     onSubmit(form: FormGroup): void {
-        console.log(form.valid)
+        console.log(this.requestForm.value)
     }
 }
