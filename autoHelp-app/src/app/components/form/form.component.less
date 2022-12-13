@@ -1,0 +1,53 @@
+@import "../../../styles/varibles.less";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: @color-white;
+    width: 100%;
+    padding: 40px 60px;
+    margin-right: 40px;
+
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    & > :first-child {
+        font-weight: 500;
+        font-size: 24px;
+        color: @color-blue;
+        padding-bottom: 12px;
+    }
+    & button {
+        background-color: @color-red;
+        padding: 16px 24px;
+        margin-top: 32px;
+        border: none;
+
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 100%;
+        color: white;
+        &:not([disabled]) {
+            opacity: 1;
+        }
+        &[disabled] {
+            opacity: 0.56;
+        }
+    }
+    & input {
+        border: 2px solid rgba(192, 192, 192, 1);
+        padding: 16px 12px;
+        margin-top: 20px;
+
+        font-weight: 500;
+        font-size: 16px;
+    }
+}
+
+.tip {
+    padding-top: 4px;
+
+    font-size: 12px;
+    color: @color-blue;
+}

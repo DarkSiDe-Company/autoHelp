@@ -11,6 +11,10 @@ import { MainContentComponent } from './components/main-content/main-content.com
 import { ServicesComponent } from './components/services/services.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { MapComponent } from './components/map/map.component';
+import { FormComponent } from './components/form/form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PhoneMaskDirective } from './directives/phone-mask.directive';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
     declarations: [
@@ -19,13 +23,18 @@ import { MapComponent } from './components/map/map.component';
         MainContentComponent,
         ServicesComponent,
         ContactsComponent,
-        MapComponent
+        MapComponent,
+        FormComponent,
+        PhoneMaskDirective
     ],
     imports: [
         BrowserModule,
+        ReactiveFormsModule,
+        FormsModule,
         AppRoutingModule,
         HttpClientModule,
-        AngularSvgIconModule.forRoot()
+        AngularSvgIconModule.forRoot(),
+        NgxMaskModule.forRoot(),
     ],
     providers: [],
     bootstrap: [AppComponent]
