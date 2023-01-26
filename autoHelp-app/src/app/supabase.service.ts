@@ -16,8 +16,8 @@ export class SupabaseService {
         return this.supabase.from('requests').select();
     }
 
-    insertRequest(userPhone: string, user_name: string, user_car?: string) {
-        return this.supabase.from('requests').insert({ user_phone: userPhone, user_name: user_name, user_car: user_car })
+    insertRequest(userPhone: string, user_name: string, user_car: string, user_commentary?: string) {
+        return this.supabase.from('requests').insert({ user_phone: userPhone, user_name: user_name, user_car: user_car, user_commentary:user_commentary })
     }
 }
 

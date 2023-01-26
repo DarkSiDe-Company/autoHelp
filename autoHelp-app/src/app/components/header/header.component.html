@@ -7,9 +7,9 @@
         </span>
     </div>
     <div class="menu">
-        <span>Как мы работаем</span>
-        <span>Услуги</span>
-        <span>Контакты</span>
+        <ng-container *ngFor="let menuTitle of menuTitles"
+            ><span (click)="scroll(menuTitle[1])">{{ menuTitle[0] }}</span>
+        </ng-container>
     </div>
     <div class="contacts">
         <div>7 (343) 361-52-26</div>
